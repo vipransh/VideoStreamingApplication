@@ -2,6 +2,10 @@
 
 This repository contains a YouTube clone application developed using React, Redux, and Tailwind CSS. The application aims to replicate the core features and user experience of the popular video-sharing platform, YouTube.
 
+
+https://github.com/vipransh/VideoStreamingApplication/assets/30025222/08058e3e-24b1-47f7-ab4e-fd50b1abd483
+
+
 ## Key Features
 
 - **Autocomplete/Typeahead Suggestions for Search:** Enhanced search functionality with autocomplete/typeahead suggestions. Utilized caching and debouncing methods to optimize API calls and improve search performance.
