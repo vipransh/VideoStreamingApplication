@@ -17,7 +17,7 @@ function MainContainer() {
    }
    if(menuFlag){
     return (
-      <div className='w-[80%] px-2 py-2 h-[96%]'> 
+      <div className='w-[100%] md:w-[80%] px-2 py-2 h-[96%]'> 
       <UserInterestList/>
       <VideoContainer/>
       </div>

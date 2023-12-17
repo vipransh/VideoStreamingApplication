@@ -41,7 +41,7 @@ function VideoContainer() {
   }
 
   return (
-    <div className='flex flex-wrap h-full  justify-between  pt-6 overflow-y-auto '>
+    <div className='flex  flex-wrap h-full items-center  justify-between  pt-6 overflow-y-auto w-full'>
      {
       videoList&& videoList.map((data)=>(
       <Link key={data.id} to={"/watch?v="+data.id}>

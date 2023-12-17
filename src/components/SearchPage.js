@@ -50,12 +50,12 @@ function SearchPage() {
       {
         searchResponse && searchResponse.map((data,index)=>(
        (data.id?.videoId) &&   <Link key={index} to={"/watch?v="+data.id?.videoId}>
-         <div className='flex flex-row gap-4'>
+         <div className='flex flex-col  md:flex-row gap-4'>
             <img className='rounded-lg' src={data.snippet?.thumbnails.medium.url} alt='thumbnail'/>
             <div>
-              <h2 className='font-medium'>{data.snippet?.title}</h2>
+              <h2 className='font-medium overflow-hidden'>{data.snippet?.title}</h2>
               <p>{data.snippet?.channelTitle}</p>
-              <p className='text-gray-700'>{data.snippet?.description}</p>
+              <p className='text-gray-700 overflow-hidden'>{data.snippet?.description}</p>
             </div>
           </div>
          </Link>

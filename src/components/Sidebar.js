@@ -27,10 +27,10 @@ function Sidebar() {
   const menuFlag=useSelector(store=>store.app.menuFlag);
 
   if(!menuFlag) return null;
-
+  // <div className='w-1/5  overflow-y-auto border-r-2 border-gray-200'>
 
   return (
-    <div className='w-1/5  overflow-y-auto border-r-2 border-gray-200'>
+    <div className='absolute md:relative z-10  md:w-1/5 bg-white  overflow-y-auto border-r-2 border-gray-200'>
          {/* <!-- Group 1 --> */}
       <div className="flex flex-col  pb-4  border-b-2 border-gray-200">
            {/* <!-- home --> */}

@@ -20,8 +20,8 @@ function VideoCard({data}) {
     }
     
   return (
-    <div className='w-56  mb-4'>
-        <img className='rounded-t-lg' src={image} alt='thumbnail'/>
+    <div className='w-92 md:w-56   mb-4'>
+        <img className='rounded-t-lg w-full object-fill md:w-auto ' src={image} alt='thumbnail'/>
         <div>
         <h3 className='font-bold mt-2'>{title.length>50? title.slice(0,49)+"...": title}</h3>
         <p className='text-xs text-gray-600 mt-2 font-medium'>{channelTitle}</p>

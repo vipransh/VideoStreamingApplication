@@ -1,19 +1,19 @@
 import React,{useEffect,useState} from 'react'
 import { Youtube_Comment_Api } from '../config/apiConfig'
 import CommentReplies from './CommentReplies'
-import downArrowIcon from '../assets/down-arrow-icon.png'
+// import downArrowIcon from '../assets/down-arrow-icon.png'
 
 function TopComments({videoId}) {
     const [comments,setComments]=useState([])
-    const [replyFlag, setReplyFlag]=useState(false)
+    // const [replyFlag, setReplyFlag]=useState(false)
 
 
-    const replyVisibility=()=>{
-        if(replyFlag)
-        setReplyFlag(false)
-        else
-        setReplyFlag(true)
-    }
+    // const replyVisibility=()=>{
+    //     if(replyFlag)
+    //     setReplyFlag(false)
+    //     else
+    //     setReplyFlag(true)
+    // }
 
 
     useEffect(()=>{
@@ -26,7 +26,7 @@ function TopComments({videoId}) {
         fetchComments();
     },[videoId])
   return (
-    <div className='mt-6 pl-10 '>
+    <div className='mt-6 pl-2 md:pl-10 '>
         <div><h1 className='mb-6 text-xl'>{comments && comments.length} comments</h1></div>
         {
             comments && comments.map((data,index)=>(
@@ -37,16 +37,21 @@ function TopComments({videoId}) {
                     </div>
                     <div>
                         <h3 className='font-medium'>{data.snippet?.topLevelComment.snippet?.authorDisplayName}</h3>
-                        <p>{data.snippet?.topLevelComment.snippet?.textDisplay}</p>
+                        <p>{data.snippet?.topLevelComment.snippet?.textOriginal}</p>
                     </div>
                     </div>
                      {
-                        data.replies && <div>
-                        <div className='flex items-center gap-3 ml-12'>
+                        data.replies && data.replies?.comments.length!==0 &&  <div>
+                        {
+                            data.replies?.comments.map((cmt, index)=>(
+                                <CommentReplies data={cmt} key={index+"un"}/>
+                            ))
+                        } 
+                        {/* <div className='flex items-center gap-3 ml-12'> 
                         <img className='cursor-pointer w-6' onClick={replyVisibility} src={downArrowIcon} alt="arrow-icon"/>
                         <p className='text-sm font-semibold'>{data.replies?.comments.length} reply</p>
-                        </div>
-                        {(data.snippet?.totalReplyCount && replyFlag)>=1? <CommentReplies comments={data.replies?.comments}/>: ""}
+                        </div> */}
+                        {/* {(data.snippet?.totalReplyCount && replyFlag)>=1? <CommentReplies comments={data.replies?.comments}/>: ""} */}
                     </div>
                      }
                 </div>

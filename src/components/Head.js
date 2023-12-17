@@ -36,7 +36,7 @@ function Head (){
     <div className='w-full flex flex-row items-center justify-between px-4 py-2  '>
       <div className='flex w-1/6'>
       <img onClick={()=>toogleMenuHandler()} className='h-6 cursor-pointer' src={menuImg} alt='menu'/>
-       <a href='/'><img className='h-6 ml-4' src={logo} alt='logo'/></a>
+       <a href='/'><img className='hidden md:flex h-6 ml-4' src={logo} alt='logo'/></a>
       </div>
       <div className='flex flex-col w-2/3 items-center'>
         <div className='flex w-full items-center justify-center'>
@@ -58,9 +58,9 @@ function Head (){
         </div>: ""
         }
       </div>
-      <div className='flex w-1/6 items-center justify-end gap-3'>
-      <img className='cursor-pointer' src={videoIcon} alt='video-icon'/>
-      <img className='cursor-pointer' src={bellIcon} alt='bell-icon'/>
+      <div className='flex md:w-1/6 items-center justify-end gap-3'>
+      <img className='hidden md:flex cursor-pointer' src={videoIcon} alt='video-icon'/>
+      <img className='hidden md:flex cursor-pointer' src={bellIcon} alt='bell-icon'/>
       <img className='h-6 cursor-pointer' src={userIcon} alt='user-icon'/>
       </div>
     </div>

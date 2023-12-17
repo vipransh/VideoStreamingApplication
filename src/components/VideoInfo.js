@@ -21,7 +21,7 @@ function VideoInfo({videoId}) {
 
 
   return (
-    <div className='mt-4 w-[65%] '>
+    <div className='mt-4 w-full md:w-[65%] '>
         <h2 className='font-bold'>{info && info.snippet?.title}</h2>
         <div className='mt-3 flex flex-row justify-between items-center'>
         <div className='flex flex-row items-center '>
@@ -30,21 +30,21 @@ function VideoInfo({videoId}) {
             <h3 className='font-bold'>{info && info.snippet?.channelTitle}</h3>
             <p className='font-medium'>4M</p>
             </div>
-            <div class="flex flex-row items-center ml-1 md:ml-8 " >
-                  <div class="bg-[#E21717] px-3 py-1 rounded-3xl cursor-pointer subscibe-div"><h2 class="subscibe-text text-white text-xs md:text-lg">Subscribe</h2></div>
-                  <img class="w-5 md:w-6 h-5 md:h-6 ml-1 md:ml-2 cursor-pointer" src={bellIcon} alt="bell-icon"/>
+            <div className="flex flex-row items-center ml-1 md:ml-8 " >
+                  <div className="bg-[#E21717] px-3 py-1 rounded-3xl cursor-pointer subscibe-div"><h2 className="subscibe-text text-white text-xs md:text-lg">Subscribe</h2></div>
+                  <img className="w-5 md:w-6 h-5 md:h-6 ml-1 md:ml-2 cursor-pointer" src={bellIcon} alt="bell-icon"/>
              </div>
         </div>
-        <div class="flex flex-row items-center ">
-                <div class="flex flex-row bg-[#E7E9EB] px-4 py-2 rounded-3xl cursor-pointer">
-                  <img class=" cursor-pointer" src={likeIocn} alt="like-icon"/>
-                  <h2 class="ml-1 md:ml-2 text-xs md:text-lg">142</h2>
+        <div className="flex flex-row items-center ">
+                <div className="flex flex-row bg-[#E7E9EB] px-4 py-2 rounded-3xl cursor-pointer">
+                  <img className=" cursor-pointer" src={likeIocn} alt="like-icon"/>
+                  <h2 className="ml-1 md:ml-2 text-xm md:text-lg">142</h2>
                 </div>
-                <div class="flex flex-row items-center bg-[#E7E9EB] px-3 py-2 rounded-3xl ml-2 cursor-pointer">
-                  <img class="w-3 md:w-5" src={shareIocn} alt="share-icon"/>
-                  <h2 class="ml-1 md:ml-2 text-xs md:text-lg">Share</h2>
+                <div className="hidden md:flex flex-row items-center bg-[#E7E9EB] px-3 py-2 rounded-3xl ml-2 cursor-pointer">
+                  <img className="w-3 md:w-5" src={shareIocn} alt="share-icon"/>
+                  <h2 className="ml-1 md:ml-2 text-xs md:text-lg">Share</h2>
                 </div>
-                <div class="bg-[#E7E9EB] px-3 hidden md:flex items-center py-3 rounded-3xl ml-2 cursor-pointer"><img class="w-5" src={threeDots} alt="dot-icon"/></div>
+                <div className="bg-[#E7E9EB] px-3 hidden md:flex items-center py-3 rounded-3xl ml-2 cursor-pointer"><img className="w-5" src={threeDots} alt="dot-icon"/></div>
         </div>
         </div>
     </div>

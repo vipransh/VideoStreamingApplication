@@ -39,7 +39,7 @@ function WatchPage() {
 
   if(menuFlag){
     return (
-      <div className="px-4 py-4 w-[80%]  h-[96%] overflow-y-auto">
+      <div className="px-4 py-4 w-[100%] md:w-[80%]  h-[96%] overflow-y-auto">
         <div className='flex w-full'>
         <iframe width="800" height="400"
          src={"https://www.youtube.com/embed/"+videoId} 

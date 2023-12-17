@@ -36,7 +36,7 @@ function LiveChatSection() {
 
 
   return (
-    <div className='w-[360px] flex flex-col h-auto border border-gray-300 bg-gray-100  rounded-lg '>
+    <div className='w-[360px] hidden md:flex flex-col h-auto border border-gray-300 bg-gray-100  rounded-lg '>
         <div className='border-b border-gray-300 py-2 px-4'><h3>Live Chat</h3></div>
         <div className='h-[300px]  py-1 overflow-y-scroll  flex-col-reverse'>
            {
